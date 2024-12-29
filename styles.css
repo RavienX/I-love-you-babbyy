@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pacifico', cursive;
+    background-color: #ffe6e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 400px;
+    position: relative;
+    z-index: 1;
+}
+
+.love-message {
+    font-size: 3em;
+    color: #ff4d4d;
+    margin-bottom: 10px;
+    animation: pulse 1.5s infinite;
+}
+
+.emphasis {
+    font-size: 2em;
+    color: #ff8080;
+    margin-top: 0;
+}
+
+
+
+.love-button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Pacifico', cursive;
+}
+
+.love-button:hover {
+    background-color: #ff8080;
+    transform: scale(1.05);
+}
+
+.kitten-container {
+    margin-top: 20px;
+}
+
+.kitten {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    margin: 10px 0;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s ease;
+}
+
+.kitten.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.heart {
+    position: fixed;
+    animation: floatUp 5s linear;
+    z-index: 0;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .love-message {
+        font-size: 2.5em;
+    }
+
+    .emphasis {
+        font-size: 1.5em;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
